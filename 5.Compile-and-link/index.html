@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Directive Compile & Link Example</title>
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="compilenlink">
+  <div>
+    <!-- compile and link both execute six times for the below -->
+    <pane item="pane1"></pane>
+    <pane item="pane2"></pane>
+    <pane item="pane3"></pane>
+    <pane item="pane4"></pane>
+    <pane item="pane5"></pane>
+    <pane item="pane6"></pane>
+    <hr>
+    <!-- compile executes once and link executes six times for the below -->
+    <div ng-repeat="i in [7,8,9,10,11,12]">
+      <pane item="pane{{i}}"></pane>
+    </div>
+  </div>
+</body>
+</html>

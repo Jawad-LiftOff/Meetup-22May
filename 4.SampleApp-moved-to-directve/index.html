@@ -1,0 +1,32 @@
+<!-- HTML 5  -->
+<!doctype html>
+<!-- Bootstrapping -->
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App - With Directive</title>
+  <style type="text/css">
+    h1 {
+      color: orange;    
+    }
+  </style>
+  <!-- scripts -->
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <!-- Controller to access scope variables -->
+  <div ng-controller="todoController">
+    
+    <todo header="Done" tasks="tasks" task-filter="3" action-one="1" action-two="2"></todo>
+    <hr>
+
+    <todo header="To Do's today" tasks="tasks" task-filter="1" action-one="3" action-two="2"></todo>
+    <hr>
+
+    <todo header="To Do's tomorrow" tasks="tasks" task-filter="2" action-one="3" action-two="1"></todo>
+    <hr>
+
+  </div>
+</body>
+</html>

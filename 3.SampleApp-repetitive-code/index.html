@@ -1,0 +1,69 @@
+<!-- HTML 5  -->
+<!doctype html>
+<!-- Bootstrapping -->
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App - Without Directive</title>
+  <style type="text/css">
+    h1 {
+      color: orange;    
+    }
+  </style>
+  <!-- scripts -->
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <!-- Controller to access scope variables -->
+  <div ng-controller="todoController">
+    <!-- table for tasks complete -->
+    <h1>Done tasks</h1>
+    <table ng-show="([tasks] | filter:3).length > 0">
+      <tr>
+        <th> Task </th>
+        <th> Move to today </th>
+        <th> Move to tomorrow</th>
+      </tr>
+      <tr ng-repeat="task in tasks | filter:3">
+        <td><b style='text-decoration:line-through; background-color: lime'>{{ task.name }}</b></td>
+        <td> <input type="checkbox" ng-click="task.type = 1"></td>
+        <td><input type="checkbox" ng-click="task.type = 2"></td>
+      </tr>          
+    </table> 
+    <div ng-show="([tasks] | filter:3).length == 0">Nothing done yet..!!</div> 
+    <hr>
+    <!-- table for today's tasks -->
+    <h1>To Do's today</h1>
+    <table ng-show="([tasks] | filter:1).length > 0">
+      <tr>
+        <th> Task </th>
+        <th> Mark as done </th>
+        <th> Move to tomorrow</th>
+      </tr>
+      <tr ng-repeat="task in tasks | filter:1">
+        <td><b style='background-color: yellow'>{{ task.name }}</b></td>
+        <td> <input type="checkbox" ng-click="task.type = 3"></td>
+        <td><input type="checkbox" ng-click="task.type = 2"></td>
+      </tr>          
+    </table>
+    <div ng-show="([tasks] | filter:1).length == 0">You're done for the day!!</div>
+    <hr>
+    <!-- table for tomorrow tasks -->
+    <h1>To Do's tomorrow</h1>
+    <table ng-show="([tasks] | filter:2).length > 0">
+      <tr>
+        <th> Task </th>
+        <th> Mark as done </th>
+        <th> Move to today</th>
+      </tr>
+      <tr ng-repeat="task in tasks | filter:2">
+        <td><b style='background-color: cyan'>{{ task.name }}</b></td>
+        <td> <input type="checkbox" ng-click="task.type = 3"></td>
+        <td><input type="checkbox" ng-click="task.type = 1"></td>
+      </tr>          
+    </table>
+    <div ng-show="([tasks] | filter:2).length == 0">No tasks for tomorrow!!</div>
+  </div>
+</body>
+</html>

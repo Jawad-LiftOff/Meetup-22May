@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Directive Transclusion Example</title>
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-app="transcludeexample">
+  <div>
+    <!-- directive without transclusion - will clear the inner content -->
+    <notransclude>
+      <h3>I will be overwritten</h3>
+    </notransclude>
+    <hr>
+    <!-- directive without transclusion - will clear the inner content -->
+    <dotransclude>
+      <h3>I am the transcluded text</h3>
+    </dotransclude>
+
+  </div>
+</body>
+</html>

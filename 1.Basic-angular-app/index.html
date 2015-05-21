@@ -1,0 +1,26 @@
+<!-- HTML 5  -->
+<!doctype html>
+<!-- Bootstrapping -->
+<html ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Angualr App</title>
+  <!-- scripts -->
+  <script src="lib/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <!-- this wont work as it is not in scope of the controller -->
+  <div ng-bind="message"></div>
+  <hr/>
+  <!-- Controller to access scope variables -->
+
+  <div ng-controller="myController">
+    <div ng-bind="message"></div>
+    <hr/>
+    <input type="text" ng-model="myModel">
+    <div ng-bind="myModel"></div>
+    <div>{{ myModel }}</div>
+  </div>
+</body>
+</html>
