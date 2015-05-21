@@ -3,8 +3,8 @@ Meetup - AngularJs Directives(22nd May 2015)
 
 Few examples to show the need and power of Angular Directives
 
-Content
--------
+Contents
+--------
 
 This folder consists of a few Directive functionalities with examples
 
