@@ -8,7 +8,9 @@ Content
 
 This folder consists of a few Directive functionalities with examples
 
-* 1.SampleApp-repetitive-code
-* 2.SampleApp-moved-to-directve
-* 3.Compile-and-link
-* 4.Transclusion
+* 1.Basic-angular-app
+* 2.Basic-directive-app
+* 3.SampleApp-repetitive-code
+* 4.SampleApp-moved-to-directve
+* 5.Compile-and-link
+* 6.Transclusion
